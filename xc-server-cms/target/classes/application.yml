@@ -1,0 +1,12 @@
+server:
+  port: 31001
+
+spring:
+  data:
+    mongodb:
+      database: dl_cms
+      uri: mongodb://192.168.1.109:27017
+      username: root
+      password: 123456
+  application:
+    name: cms-server
