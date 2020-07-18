@@ -25,6 +25,12 @@ public class ManagerAppli {
         SpringApplication.run(ManagerAppli.class,args);
     }
 
+    /**
+     * @Description:  RestTemplate 是SpringMvc 提供的 http请求接口，
+     * 底层可以使用第三方的 http 客户端工具实现 http请求。
+     * @Author: YaoGX
+     * @Date: 2020/7/18 15:35
+     **/
     @Bean
     public RestTemplate restTemplate(){
         return new RestTemplate(new OkHttp3ClientHttpRequestFactory());
