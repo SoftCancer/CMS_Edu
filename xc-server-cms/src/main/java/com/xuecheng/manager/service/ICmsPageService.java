@@ -51,4 +51,11 @@ public interface ICmsPageService {
      **/
     public ResponseResult deleteById(String id);
 
+    /**
+     * 获取发布页面
+     * @Author: YaoGX
+     * @Date: 2020/6/21 15:35
+     **/
+    public String getPageHtml(String pageId);
+
 }

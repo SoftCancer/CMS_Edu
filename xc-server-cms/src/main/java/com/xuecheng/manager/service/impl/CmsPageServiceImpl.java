@@ -21,6 +21,7 @@ import freemarker.template.Configuration;
 import freemarker.template.Template;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -170,6 +171,7 @@ public class CmsPageServiceImpl implements ICmsPageService {
      * @Author: YaoGX
      * @Date: 2020/7/18 22:57 
      **/
+    @Override
     public String getPageHtml(String pageId) {
         // 获取数据模型
         Map map = getModelByPageId(pageId);
@@ -188,7 +190,11 @@ public class CmsPageServiceImpl implements ICmsPageService {
         return htmlContext;
     }
 
-
+/**
+ *  获取页面模板信息
+ * @Author: YaoGX
+ * @Date: 2020/7/19 10:40 
+ **/
     public String generateHtml(String templateContext, Map map) {
         // 创建配置对象
         Configuration configuration = new Configuration(Configuration.getVersion());
@@ -268,6 +274,7 @@ public class CmsPageServiceImpl implements ICmsPageService {
             CustomException.throwException(CmsCode.CMS_GENERATEHTML_DATAURLISNULL);
         }
 
+        // 请求 /cms/config//model/{id}  接口 ，获取模板数据
         ResponseEntity<Map> forEntity = restTemplate.getForEntity(dataUrl, Map.class);
         Map body = forEntity.getBody();
         return body;
