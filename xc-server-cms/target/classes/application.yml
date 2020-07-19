@@ -10,3 +10,8 @@ spring:
       password: 123456
   application:
     name: cms-server
+
+  freemarker:
+    cache: false  # 关闭模板缓存，方便测试
+    settings:
+      template_update_delay : 0
