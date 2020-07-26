@@ -1,0 +1,32 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.class
+*.iml
+out
+gen
+xc-framework-common/src/main/java/com/xuecheng/framework/interceptor/
+xc-framework-common/src/main/resources/
+xc-framework-common/src/test/
+xc-framework-model/src/main/resources/
+xc-framework-model/src/test/
+xc-framework-model/target/generated-sources/
+xc-framework-utils/src/main/resources/
+xc-framework-utils/src/test/
+xc-server-cms/src/test/
+xc-server-cms/target/classes/com/xuecheng/manager/config/
+xc-server-cms/target/classes/com/xuecheng/manager/controller/CmsConfigController.class
+xc-server-cms/target/classes/com/xuecheng/manager/dao/CmsConfigRepository.class
+xc-server-cms/target/classes/com/xuecheng/manager/dao/CmsTemplateRepository.class
+xc-server-cms/target/classes/com/xuecheng/manager/service/ICmsConfigService.class
+xc-server-cms/target/classes/com/xuecheng/manager/service/impl/CmsConfigImpl.class
+xc-server-cms/target/generated-sources/
+xc-service-api/src/main/resources/
+xc-service-api/src/test/
+xc-service-api/target/generated-sources/
+xc-ui-pc-sysmanage/src/module/cms/components/
+xc-ui-pc-sysmanage/src/module/home/components/
+xc-ui-pc-sysmanage/src/statics/images/
