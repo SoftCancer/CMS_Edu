@@ -1,0 +1,29 @@
+server:
+  port: 31003
+
+spring:
+  data:
+    mongodb:
+      database: dl_cms
+      uri: mongodb://192.168.1.109:27017
+      username: root
+      password: 123456
+
+  application:
+    name: cms-server-client
+
+  rabbitmq:
+    host: 192.168.1.109
+    port: 5672
+    username: root
+    password: 123456
+    virtual-host: /
+
+
+cmsedu:
+  mq:
+
+    queue: queue_cms_client_01
+    routingKey:
+
+
