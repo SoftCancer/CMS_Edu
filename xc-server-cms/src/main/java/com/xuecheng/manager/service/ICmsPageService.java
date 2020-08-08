@@ -58,4 +58,11 @@ public interface ICmsPageService {
      **/
     public String getPageHtml(String pageId);
 
+    /**
+     * 发布页面
+     * @Author: YaoGX
+     * @Date: 2020/6/21 15:35
+     **/
+    public ResponseResult postPageToMongoDB(String pageId);
+
 }

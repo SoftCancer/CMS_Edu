@@ -47,5 +47,14 @@ public class CmsPageController {
           return cmsPageService.deleteById(pageId);
     }
 
+    /**
+     *
+     * @Author: YaoGX
+     * @Date: 2020/8/8 23:36
+     **/
+    @PostMapping("/postPage/{pageId}")
+    public ResponseResult postPageToMQ(@PathVariable("pageId") String pageId){
+        return cmsPageService.postPageToMongoDB(pageId);
+    }
 
 }

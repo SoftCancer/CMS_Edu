@@ -19,10 +19,9 @@ spring:
     password: 123456
     virtual-host: /
 
-
 cmsedu:
   mq:
-
+    # 队列名称
     queue: queue_cms_client_01
     routingKey:
 
