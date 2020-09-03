@@ -200,7 +200,7 @@ public class CmsPageServiceImpl implements ICmsPageService {
     }
 
     /**
-     * 获取页面模板信息
+     *  通过 FreeMarker 对数据和 模板进行拼装
      *
      * @Author: YaoGX
      * @Date: 2020/7/19 10:40
@@ -295,6 +295,7 @@ public class CmsPageServiceImpl implements ICmsPageService {
      * @Author: YaoGX
      * @Date: 2020/8/8 23:33
      **/
+    @Override
     public ResponseResult postPageToMongoDB(String pageId){
 
         // 执行页面静态化
@@ -308,6 +309,12 @@ public class CmsPageServiceImpl implements ICmsPageService {
         return ResponseResult.SUCCESS();
     }
 
+    
+    /**
+     *  发送消息到 RabbitMQ 中
+     * @Author: YaoGX
+     * @Date: 2020/8/9 17:42
+     **/
     private void  sendPageIdToMQ(String pageId){
         CmsPage cmsPage = this.findById(pageId).getCmsPage();
         if (cmsPage == null) {
