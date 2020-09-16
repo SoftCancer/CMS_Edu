@@ -1,0 +1,31 @@
+server:
+  port: 8899
+
+
+fdfs:
+# 连接Tracker服务器超时时间
+  connect-timeout: 10000
+# storage服务器响应的超时时间
+  so-timeout: 3000
+#  trakcer服务器的数量
+  tracker-list:
+   - 192.168.1.104:22122
+# 存储服务器 nginx 的访问地址及端口号
+  web-server-url: http://192.168.1.104:8888/
+
+spring:
+  data:
+    mongodb:
+      database: dl_course
+      uri: mongodb://192.168.1.104:27017
+      username: root
+      password: 123456
+
+  application:
+    name: cms-server-course
+#  Spring Boot工程嵌入的tomcat限制了请求文件的大小
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
