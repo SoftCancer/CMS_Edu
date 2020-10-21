@@ -17,7 +17,7 @@ spring:
   data:
     mongodb:
       database: dl_course
-      uri: mongodb://192.168.1.104:27017
+      uri: mongodb://192.168.1.105:27017
       username: root
       password: 123456
 
@@ -29,3 +29,19 @@ spring:
       max-file-size: 10MB
       max-request-size: 100MB
 
+  rabbitmq:
+    host: 192.168.1.105
+    port: 5672
+    username: root
+    password: 123456
+    virtual-host: /
+    listener:
+      simple:
+      # 表示消息确认方式，其有三种配置方式，分别是none、manual和auto；默认auto
+        acknowledge-mode: manual
+        # 指定一个请求能处理多少个消息，如果有事务的话，必须大于等于transaction数量.
+        prefetch: 1
+    publisher-confirms: true #开启消息确认机制
+    publisher-returns: true #支持消息发送失败返回队列
+    template:
+      mandatory: true
